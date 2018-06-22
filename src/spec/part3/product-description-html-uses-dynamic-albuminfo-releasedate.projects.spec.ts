@@ -23,7 +23,7 @@ let json = require('../../assets/album.json');
 let productDescriptionComponentExists = false;
 let ProductDescriptionComponent;
 try {
-  ProductDescriptionComponent = require('../../app/product-description/product-description.component.ts').ProductDescriptionComponent;
+  ProductDescriptionComponent = require('../../app/components/product-description/product-description.component.ts').ProductDescriptionComponent;
   productDescriptionComponentExists = true;
 } catch (e) {
   productDescriptionComponentExists = false;
@@ -32,14 +32,14 @@ try {
 let productServiceExists = false;
 let ProductService;
 try {
-  ProductService = require('../../app/product.service.ts').ProductService;
+  ProductService = require('../../app/services/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
   productServiceExists = false;
 }
 
 class AProductService {
-  
+
 }
 
 describe('ProductDescription', () => {
@@ -75,7 +75,7 @@ describe('ProductDescription', () => {
     product_service = providedService;
     mock_backend = mockBackend;
   }));
-  
+
   it(`should use release date data from the albumInfo property in the HTML template @product-description-html-uses-dynamic-albuminfo-releasedate`, async(() => {
     since('The ProductService hasn\'t been created yet.').expect(productServiceExists).toBe(true);
     expect(productDescriptionComponentExists).toBe(true);
@@ -94,7 +94,7 @@ describe('ProductDescription', () => {
 
     let htmlString = ""
     try {
-      htmlString = require('../../app/product-description/product-description.component.html');
+      htmlString = require('../../app/components/product-description/product-description.component.html');
     } catch (e) {
     }
     if (htmlString != "") {

@@ -6,7 +6,7 @@ const _ = require('lodash');
 let productDescriptionCssFileExists = false;
 let productDescriptionCssFile;
 try {
-  productDescriptionCssFile = require('../../app/product-description/product-description.component.css');
+  productDescriptionCssFile = require('../../app/components/product-description/product-description.component.css');
   productDescriptionCssFileExists = true;
 } catch (e) {
   productDescriptionCssFileExists = false;
@@ -33,5 +33,5 @@ describe('ProductDescriptionComponent', () => {
       since('Your image tag selector doesn\'t have a `width` property that\'s equal to `100%`.').expect(imgRule.style['width']).toBe('100%');
     }
   }));
-  
+
 });

@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {Http, Response} from '@angular/http';
-import {Album} from './album';
+import {Album} from '../interfaces/album';
 import {Observable} from 'rxjs/Observable';
-import {Product} from './product';
+import {Product} from '../interfaces/product';
 import 'rxjs/add/operator/map';
 
 @Injectable()

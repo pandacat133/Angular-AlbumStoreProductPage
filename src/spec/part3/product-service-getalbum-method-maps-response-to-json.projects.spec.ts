@@ -15,7 +15,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 let productServiceExists = false;
 let ProductService;
 try {
-  ProductService = require('../../app/product.service.ts').ProductService;
+  ProductService = require('../../app/services/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
   productServiceExists = false;

@@ -9,7 +9,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 let productDescriptionComponentExists = false;
 let ProductDescriptionComponent;
 try {
-  ProductDescriptionComponent = require('../../app/product-description/product-description.component.ts').ProductDescriptionComponent;
+  ProductDescriptionComponent = require('../../app/components/product-description/product-description.component.ts').ProductDescriptionComponent;
   productDescriptionComponentExists = true;
 } catch (e) {
   productDescriptionComponentExists = false;
@@ -18,7 +18,7 @@ try {
 let productPageComponentExists = false;
 let ProductPageComponent;
 try {
-  ProductPageComponent = require('../../app/product-page/product-page.component.ts').ProductPageComponent;
+  ProductPageComponent = require('../../app/components/product-page/product-page.component.ts').ProductPageComponent;
   productPageComponentExists = true;
 } catch (e) {
   productPageComponentExists = false;
@@ -49,5 +49,5 @@ describe('ProductDescription', () => {
 
     since('The ProductDescriptionComponent\'s HTML file doesn\'t contain a `div` tag with a class of `description` - have you moved it over from the ProductPageComponent yet?').expect(ProductDescriptionFixture.nativeElement.querySelector('div.description')).not.toBeNull();
   }));
-    
+
 });

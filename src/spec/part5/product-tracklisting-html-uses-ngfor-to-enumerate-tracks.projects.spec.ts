@@ -16,13 +16,13 @@ let json = require('../../assets/album.json');
 
 let html;
 try {
-  html = require('../../app/product-tracklisting/product-tracklisting.component.html');
+  html = require('../../app/components/product-tracklisting/product-tracklisting.component.html');
 } catch (e) { }
 
 let productTracklistingComponentExists = false;
 let ProductTracklistingComponent;
 try {
-  ProductTracklistingComponent = require('../../app/product-tracklisting/product-tracklisting.component.ts').ProductTracklistingComponent;
+  ProductTracklistingComponent = require('../../app/components/product-tracklisting/product-tracklisting.component.ts').ProductTracklistingComponent;
   productTracklistingComponentExists = true;
 } catch (e) {
   productTracklistingComponentExists = false;
@@ -31,7 +31,7 @@ try {
 let productServiceExists = false;
 let ProductService;
 try {
-  ProductService = require('../../app/product.service.ts').ProductService;
+  ProductService = require('../../app/services/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
   productServiceExists = false;
@@ -96,7 +96,7 @@ describe('ProductTracklisting', () => {
     since('The ProductTracklistingComponent doesn\'t have an unordered list with multiple list items.  Have you tried adding the `ngFor` directive to the `li` tag in the template yet?').expect(ProductTracklistingFixture.nativeElement.querySelectorAll('div.tracklisting ul li').length).toBeGreaterThan(1);
     since('The ProductTracklistingComponent doesn\'t have an unordered list with multiple list items.  Have you tried adding the `ngFor` directive to the `li` tag in the template yet?').expect(comments.length).toBeGreaterThan(0);
 
-    let containsBinding = 0;    
+    let containsBinding = 0;
     if (comments.length > 0) {
       comments.forEach(element => {
         if (element.nodeValue.match('ng-reflect-ng-for-of')) {

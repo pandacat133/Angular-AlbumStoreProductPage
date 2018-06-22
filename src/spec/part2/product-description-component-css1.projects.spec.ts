@@ -6,7 +6,7 @@ const _ = require('lodash');
 let productDescriptionCssFileExists = false;
 let productDescriptionCssFile;
 try {
-  productDescriptionCssFile = require('../../app/product-description/product-description.component.css');
+  productDescriptionCssFile = require('../../app/components/product-description/product-description.component.css');
   productDescriptionCssFileExists = true;
 } catch (e) {
   productDescriptionCssFileExists = false;
@@ -60,7 +60,7 @@ describe('ProductDescriptionComponent', () => {
         }
         since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[0]).toBe('Helvetica');
         since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[1]).toBe('Arial');
-        since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[2]).toBe('sans-serif');        
+        since('Your paragraph selector doesn\'t have a `font-family` property that\'s equal to `Helvetica, Arial, sans-serif`.').expect(split[2]).toBe('sans-serif');
       }
     }
   }));

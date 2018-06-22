@@ -11,7 +11,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 let productPageComponentExists = false;
 let ProductPageComponent;
 try {
-  ProductPageComponent = require('../../app/product-page/product-page.component.ts').ProductPageComponent;
+  ProductPageComponent = require('../../app/components/product-page/product-page.component.ts').ProductPageComponent;
   productPageComponentExists = true;
 } catch (e) {
   productPageComponentExists = false;

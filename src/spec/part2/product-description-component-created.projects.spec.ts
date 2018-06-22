@@ -3,7 +3,7 @@ import { TestBed, async } from '@angular/core/testing';
 let productDescriptionComponentExists = false;
 let ProductDescriptionComponent;
 try {
-  ProductDescriptionComponent = require('../../app/product-description/product-description.component.ts').ProductDescriptionComponent;
+  ProductDescriptionComponent = require('../../app/components/product-description/product-description.component.ts').ProductDescriptionComponent;
   productDescriptionComponentExists = true;
 } catch (e) {
   productDescriptionComponentExists = false;

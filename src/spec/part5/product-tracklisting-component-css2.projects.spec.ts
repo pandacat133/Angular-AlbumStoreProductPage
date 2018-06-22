@@ -6,7 +6,7 @@ const _ = require('lodash');
 let productTracklistingCssFileExists = false;
 let productTracklistingCssFile;
 try {
-  productTracklistingCssFile = require('../../app/product-tracklisting/product-tracklisting.component.css');
+  productTracklistingCssFile = require('../../app/components/product-tracklisting/product-tracklisting.component.css');
   productTracklistingCssFileExists = true;
 } catch (e) {
   productTracklistingCssFileExists = false;
@@ -34,5 +34,5 @@ describe('ProductTracklisting', () => {
       since('Your `ul` selector doesn\'t have a `list-style-type` property that\'s equal to `none`.').expect(ulRule.style['list-style-type']).toBe('none');
     }
   }));
-  
+
 });

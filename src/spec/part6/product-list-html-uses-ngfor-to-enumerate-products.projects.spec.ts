@@ -16,13 +16,13 @@ let json = require('../../assets/products.json');
 
 let html;
 try {
-  html = require('../../app/product-list/product-list.component.html');
+  html = require('../../app/components/product-list/product-list.component.html');
 } catch (e) { }
 
 let productListComponentExists = false;
 let ProductListComponent;
 try {
-  ProductListComponent = require('../../app/product-list/product-list.component.ts').ProductListComponent;
+  ProductListComponent = require('../../app/components/product-list/product-list.component.ts').ProductListComponent;
   productListComponentExists = true;
 } catch (e) {
   productListComponentExists = false;
@@ -31,7 +31,7 @@ try {
 let productServiceExists = false;
 let ProductService;
 try {
-  ProductService = require('../../app/product.service.ts').ProductService;
+  ProductService = require('../../app/services/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
   productServiceExists = false;

@@ -9,7 +9,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 let productPageComponentExists = false;
 let ProductPageComponent;
 try {
-  ProductPageComponent = require('../../app/product-page/product-page.component.ts').ProductPageComponent;
+  ProductPageComponent = require('../../app/components/product-page/product-page.component.ts').ProductPageComponent;
   productPageComponentExists = true;
 } catch (e) {
   productPageComponentExists = false;
@@ -18,7 +18,7 @@ try {
 let productTracklistingComponentExists = false;
 let ProductTracklistingComponent;
 try {
-  ProductTracklistingComponent = require('../../app/product-tracklisting/product-tracklisting.component.ts').ProductTracklistingComponent;
+  ProductTracklistingComponent = require('../../app/components/product-tracklisting/product-tracklisting.component.ts').ProductTracklistingComponent;
   productTracklistingComponentExists = true;
 } catch (e) {
   productTracklistingComponentExists = false;
@@ -51,10 +51,10 @@ describe('ProductPage', () => {
     const ProductPageFixture = TestBed.createComponent(ProductPageComponent);
 
     since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting')).not.toBeNull()
-    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting').nodeName).toBe('APP-PRODUCT-TRACKLISTING');    
+    since('You haven\'t added the `app-product-tracklisting` selector yet.').expect(ProductPageFixture.nativeElement.querySelector('app-product-tracklisting').nodeName).toBe('APP-PRODUCT-TRACKLISTING');
   }));
-  
-  
+
+
 });
 
 describe('ProductTracklisting', () => {

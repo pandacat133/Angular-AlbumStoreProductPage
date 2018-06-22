@@ -6,7 +6,7 @@ const _ = require('lodash');
 let productTracklistingCssFileExists = false;
 let productTracklistingCssFile;
 try {
-  productTracklistingCssFile = require('../../app/product-tracklisting/product-tracklisting.component.css');
+  productTracklistingCssFile = require('../../app/components/product-tracklisting/product-tracklisting.component.css');
   productTracklistingCssFileExists = true;
 } catch (e) {
   productTracklistingCssFileExists = false;
@@ -34,5 +34,5 @@ describe('ProductTracklisting', () => {
       since('Your `button` selector doesn\'t have a `line-height` property that\'s equal to `1`.').expect(buttonRule.style['line-height']).toBe('1');
     }
   }));
-  
+
 });

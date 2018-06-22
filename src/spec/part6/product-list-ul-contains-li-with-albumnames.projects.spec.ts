@@ -16,13 +16,13 @@ let json = require('../../assets/products.json');
 
 let html;
 try {
-  html = require('../../app/product-list/product-list.component.html');
+  html = require('../../app/components/product-list/product-list.component.html');
 } catch (e) { }
 
 let productListComponentExists = false;
 let ProductListComponent;
 try {
-  ProductListComponent = require('../../app/product-list/product-list.component.ts').ProductListComponent;
+  ProductListComponent = require('../../app/components/product-list/product-list.component.ts').ProductListComponent;
   productListComponentExists = true;
 } catch (e) {
   productListComponentExists = false;
@@ -31,7 +31,7 @@ try {
 let productServiceExists = false;
 let ProductService;
 try {
-  ProductService = require('../../app/product.service.ts').ProductService;
+  ProductService = require('../../app/services/product.service.ts').ProductService;
   productServiceExists = true;
 } catch (e) {
   productServiceExists = false;
@@ -92,7 +92,7 @@ describe('ProductList', () => {
     ProductListFixture.detectChanges();
 
     since('The ProductListComponent doesn\'t have an unordered list with multiple list items.  Have you tried adding the `ngFor` directive to the `li` tag in the template yet?').expect(ProductListFixture.nativeElement.querySelectorAll('ul li').length).toBeGreaterThan(1);
-    
+
     since('The album names in your HTML template don\'t match the album names in the `products` JSON response.').expect(ProductListFixture.nativeElement.querySelectorAll('ul li')[0].innerHTML).toContain('Opacity Zero');
     since('The album names in your HTML template don\'t match the album names in the `products` JSON response.').expect(ProductListFixture.nativeElement.querySelectorAll('ul li')[1].innerHTML).toContain('Top, Right, Bottom, Left');
   }));

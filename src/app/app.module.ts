@@ -5,11 +5,11 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { ProductPageComponent } from './product-page/product-page.component';
-import { ProductDescriptionComponent } from './product-description/product-description.component';
-import { ProductService } from './product.service';
-import { ProductTracklistingComponent } from './product-tracklisting/product-tracklisting.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { ProductPageComponent } from './components/product-page/product-page.component';
+import { ProductDescriptionComponent } from './components/product-description/product-description.component';
+import { ProductService } from './services/product.service';
+import { ProductTracklistingComponent } from './components/product-tracklisting/product-tracklisting.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 const appRoutes: Routes = [
   { path: 'products', component: ProductListComponent },
